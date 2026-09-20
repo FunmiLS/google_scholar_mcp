@@ -1,6 +1,11 @@
 import asyncio
 from mcp.server.fastmcp import FastMCP
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
+
+# Set up a free proxy to avoid Google Scholar rate-limiting/blocking
+_pg = ProxyGenerator()
+_pg.FreeProxies()
+scholarly.use_proxy(_pg)
 
 # Create the MCP server
 mcp = FastMCP("Google Scholar")

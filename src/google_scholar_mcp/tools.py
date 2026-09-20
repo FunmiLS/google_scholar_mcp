@@ -1,5 +1,10 @@
 import asyncio
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
+
+# Set up a free proxy to avoid Google Scholar rate-limiting/blocking
+_pg = ProxyGenerator()
+_pg.FreeProxies()
+scholarly.use_proxy(_pg)
 
 async def search_author(name: str) -> str:
     """

@@ -16,10 +16,9 @@ dependencies = [
     "mcp",
     "fastmcp",
     "google-search-results",
-    "python-dotenv"
     "scholarly",
-    "python-dotenv",
-    "asyncio"
+    "bibtexparser<2.0.0",
+    "httpx<0.28.0"
 ]
 
 [project.optional-dependencies]
@@ -34,3 +33,6 @@ custom-scholar = "google_scholar_mcp.main:run"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
