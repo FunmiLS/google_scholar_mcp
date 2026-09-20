@@ -1,6 +1,6 @@
 # Google Scholar MCP
 
-A Model Context Protocol (MCP) server for querying Google Scholar via AI agents. This server enables language models to retrieve academic metadata, citation counts, and author profiles directly within their context window using the open-source `scholarly` package (no API keys required!).
+A Model Context Protocol (MCP) server for querying Google Scholar via AI agents. This server enables language models to retrieve academic metadata, citation counts, and author profiles directly within their context window using the open-source `scholarly` package (no API keys required).
 
 ## Features
 
